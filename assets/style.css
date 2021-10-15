@@ -1,0 +1,56 @@
+header{
+    display: flex;
+    word-wrap: break-word;
+    justify-content: center;
+    width: 100vw;
+    height: fit-content;
+    font-size: 2.5rem;
+}
+header h1 {
+    width: 7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--veryDarkCyan);
+}
+
+main {
+    display: flex;
+    align-self: center;
+    background-color: var(--white);
+    width: min-content;
+    padding: 3.5rem;
+    border-radius: 2rem;
+}
+
+.cardInput {
+    display: flex;
+    width: max-content;
+    height: max-content;
+    margin-right: 3rem;
+    flex-direction: column;
+}
+
+.bill {
+    font-size: 1.5rem;
+    color: var(--veryDarkCyan);
+    margin-bottom: .5rem;
+
+}
+
+#bill {
+    background-color: var(--lightGrayishCyan2);
+    border: none;
+    border-radius: .5rem;
+    padding: .6rem;
+}
+
+.tips {
+    width: 20rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tips-itens {
+    width: 3rem;
+}
