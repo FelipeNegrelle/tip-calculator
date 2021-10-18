@@ -41,7 +41,7 @@ main {
     flex-direction: column;
 }
 
-.bill {
+.text {
     font-size: 1.3rem;
     color: var(--darkGrayishCyan);
     margin-top: 1rem;
@@ -83,17 +83,18 @@ input::placeholder{
     color: var(--white);
     border: none;
     border-radius: .2rem;
-    padding: 1rem;
     margin: .4rem;
     font-size: 2rem;
     font-weight: 600;
     font-family: 'Space Mono', monospace;
     text-align: center;
+    cursor: pointer;
 }
 
 .custom {
-    width: 10rem;
+    width: 9.5rem;
     height: 4rem;
+    margin: .4rem;
     background-color: var(--lightGrayishCyan2);
     color: var(--darkGrayishCyan);
     border: none;
