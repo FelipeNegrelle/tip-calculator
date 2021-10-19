@@ -91,6 +91,21 @@ input::placeholder{
     cursor: pointer;
 }
 
+.selected {
+    width: 10rem;
+    height: 4rem;
+    border: none;
+    border-radius: .2rem;
+    margin: .4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+
 .custom {
     width: 9.5rem;
     height: 4rem;
