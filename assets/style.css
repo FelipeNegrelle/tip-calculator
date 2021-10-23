@@ -23,6 +23,10 @@ header h1 {
     letter-spacing: 1rem;
 }
 
+#night {
+    background-image: url(images/moon.svg);
+}
+
 main {
     display: flex;
     align-self: center;
