@@ -1,0 +1,183 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50rem;
+}
+
+header {
+    display: flex;
+    word-wrap: break-word;
+    justify-content: center;
+    width: 100vw;
+    height: fit-content;
+    font-size: 2.5rem;
+}
+
+header h1 {
+    width: 11rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--darkGrayishCyan);
+    margin-bottom: 5rem;
+    letter-spacing: 1rem;
+}
+
+main {
+    display: flex;
+    align-self: center;
+    background-color: var(--white);
+    width: 60rem;
+    height: 27rem;
+    padding: 3.5rem;
+    border-radius: 2rem;
+}
+
+.cardInput {
+    display: flex;
+    width: max-content;
+    height: max-content;
+    margin-right: 9rem;
+    flex-direction: column;
+}
+
+.text {
+    font-size: 1.3rem;
+    color: var(--darkGrayishCyan);
+    margin-top: 1rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+input::placeholder {
+    font-size: 1.5rem;
+    color: var(--darkGrayishCyan);
+    margin-top: 1rem;
+    font-family: 'Space Mono', monospace;
+}
+
+#bill {
+    text-align: end;
+    background-color: var(--lightGrayishCyan2);
+    background-image: url(images/icon-dollar.svg);
+    background-position: 1.2rem center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: .5rem;
+    padding: .6rem;
+}
+
+.tips {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 10rem;
+}
+
+.tips-itens {
+    width: 10rem;
+    height: 4rem;
+    background-color: var(--veryDarkCyan);
+    color: var(--white);
+    border: none;
+    border-radius: .2rem;
+    margin: .4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    cursor: pointer;
+}
+
+.selected {
+    width: 10rem;
+    height: 4rem;
+    border: none;
+    border-radius: .2rem;
+    margin: .4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+
+.custom {
+    width: 9.5rem;
+    height: 4rem;
+    margin: .4rem;
+    background-color: var(--lightGrayishCyan2);
+    color: var(--darkGrayishCyan);
+    border: none;
+    border-radius: .2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+}
+
+#people {
+    text-align: end;
+    background-color: var(--lightGrayishCyan2);
+    background-image: url(images/icon-person.svg);
+    background-position: 1rem center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: .5rem;
+    padding: .8rem;
+}
+
+.cardAnswer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--veryDarkCyan);
+    width: 23rem;
+    height: 22rem;
+    padding: 3rem;
+    border-radius: .9rem;
+    margin-left: 6rem;
+}
+
+.tipAmount {
+    margin-bottom: 2rem;
+}
+
+.cardAnswer input {
+    background-color: var(--veryDarkCyan);
+    border: none;
+    color: var(--strongCyan);
+}
+
+.reset {
+    background-color: var(--strongCyan);
+    border: none;
+    border-radius: .5rem;
+    color: var(--veryDarkCyan);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 9rem;
+    text-align: center;
+    opacity: 30%;
+}
+
+.attribution {
+    font-family: monospace;
+    font-size: 2rem;
+    letter-spacing: .4rem;
+    color: tomato;
+    align-self: center;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.attribution a:link {
+    color: darkgoldenrod;
+}
+
+.attribution a:visited {
+    color: darkcyan;
+}
