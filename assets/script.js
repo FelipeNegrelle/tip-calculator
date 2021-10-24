@@ -8,13 +8,19 @@ const tipCustom = document.getElementsByClassName("custom");
 //input for the number of people to split the tip
 const people = document.getElementById("people");
 //place to showe the total of the bill
-const tipFinal = document.getElementsByClassName("tipAmount");
+let tipFinal = document.getElementsByClassName("tipAmount");
 //place to show the tip per person
 const totalPerPerson = document.getElementsByClassName("totalPerson");
 //button that reset the values
 const reset = document.getElementsByClassName("reset");
 //select percentage for calculate the bill
 const selected = document.querySelector("button.selected");
+// class with the parseinted values of the bill, tip and people
+let values = {
+    billV: parseInt(bill.value),
+    percentage: parseInt(selected.value),
+    peopleN: parseInt(people.value)
+}
 
 tips.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -37,9 +43,14 @@ tips.forEach(btn => {
 });
 
 function calculateBill() {
-    let billValue = parseInt(bill.value);
-    let percentage = parseInt(selected.value);
-    let peopleNum = parseInt(people.value);
+    values.billV = parseInt(bill.value);
+    values.percentage = parseInt(selected.value);
+    values.peopleN = parseInt(people.value);
+    console.log(values.billV, values.percentage, values.peopleN);
 
+    tipFinal.value = ((values.billV * values.percentage) / 100) / values.peopleN;
 }
-calculateBill();
+
+if (values.billV > 0 && values.peopleN > 0) {
+    calculateBill();
+}
