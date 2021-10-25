@@ -58,7 +58,6 @@ input::placeholder{
     color: var(--darkGrayishCyan);
     margin-top: 1rem;
     font-family: 'Space Mono', monospace;
-
 }
 
 #bill {
@@ -147,7 +146,8 @@ input::placeholder{
     margin-left: 6rem;
 }
 
-.tipAmount {
+
+/* .tipAmount {
     margin-bottom: 2rem;
 }
 
@@ -155,7 +155,7 @@ input::placeholder{
     background-color: var(--veryDarkCyan);
     border: none;
     color: var(--strongCyan);
-}
+} */
 
 .reset {
     background-color: var(--strongCyan);
@@ -176,6 +176,7 @@ input::placeholder{
     color: tomato;
     align-self: center;
     margin: 1rem;
+    padding: 2rem;
 }
 
 .attribution a:link {

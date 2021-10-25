@@ -53,4 +53,55 @@
   </div>
   <script src="assets/script.js"></script>
 </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/felipenegrelle/reset.css@e5bfbdc/reset.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+    <header>
+        <h1>splitter</h1>
+    </header>
+    <main>
+        <section class="cardInput">
+            <p class="text">Bill</p>
+            <input type="text" id="bill" placeholder="0" />
+            <p class="text">Select Tip %</p>
+            <div class="tips">
+                <button type="number" class="selected tips-itens" id="btn" value="5">5%</button>
+
+                <button type="number" class="tips-itens" id="btn" value="10">10%</button>
+
+                <button type="number" class="tips-itens" id="btn" value="15">15%</button>
+
+                <button type="number" class="tips-itens" id="btn" value="25">25%</button>
+
+                <button type="number" class="tips-itens" id="btn" value="50">50%</button>
+
+                <input type="number" class="custom" placeholder="Custom">
+            </div>
+            <p class="text">Number of People</p>
+            <input type="text" id="people" placeholder="0" />
+        </section>
+        <section class="cardAnswer">
+            <div class="tipAmount">
+                <input type="number" class="tipAmount" disabled/>
+                <input type="number" class="totalPerson" disabled />
+            </div>
+            <button class="reset">reset</button>
+        </section>
+    </main>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.github.com/FelipeNegrelle">Felipe Negrelle</a>.
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
 </html>
