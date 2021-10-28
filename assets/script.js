@@ -15,10 +15,12 @@ const totalPerPerson = document.getElementsByClassName("totalPerson");
 const reset = document.getElementsByClassName("reset");
 //select percentage for calculate the bill
 const selected = document.querySelector("button.selected");
+// checkbox for toggle darkmode
+const checkbox = document.getElementById("checkbox");
 
-let billV = parseInt(bill.value);
-let peopleN = parseInt(people.value);
-let percentage = parseInt(selected.value);
+// let billV = parseInt(bill.value);
+// let peopleN = parseInt(people.value);
+// let percentage = parseInt(selected.value);
 
 tips.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -39,12 +41,22 @@ tips.forEach(btn => {
     })
 });
 
-function calculateBill() {
-    console.log(billV, percentage, peopleN);
-    tipFinal.value = (billV * percentage) / 100 / peopleN;
-    console.log(tipFinal.value)
-}
+    // function calculateBill() {
+    //     console.log(billV, percentage, peopleN);
+    //     tipFinal.value = (billV * percentage) / 100 / peopleN;
+    //     console.log(tipFinal.value)
+    // }
 
-if (billV > 0 && peopleN > 0) {
-    calculateBill();
-}
+    // if (billV > 0 && peopleN > 0) {
+    //     calculateBill();
+    // }
+
+
+
+// dark toggle implementation
+
+
+checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("dark");
+    console.log("sus");
+})

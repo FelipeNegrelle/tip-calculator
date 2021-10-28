@@ -1,4 +1,29 @@
-body.dark {
+html.dark {
     background-color: #041014;
 }
 
+main.dark {
+    background-color: var(--veryDarkCyan);
+}
+
+.text.dark {
+    color: var(--white);
+}
+
+#bill.dark, #people.dark {
+    background-color: var(--strongCyan);
+    color: var(--white);
+}
+
+.tips-itens.dark, .custom.dark{
+    background-color: var(--darkGrayishCyan);
+    color: var(--white);
+}
+
+.cardAnswer.dark {
+    background-color: var(--darkGrayishCyan);
+}
+
+input.dark::placeholder {
+    color: whitesmoke;
+}
