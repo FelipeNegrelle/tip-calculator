@@ -12,4 +12,5 @@ html {
     font-size: 62.5%;
     font-family: 'Space Mono', monospace;
     background-color: var(--lightGrayishCyan);
+    box-sizing: border-box;
 }

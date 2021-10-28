@@ -19,12 +19,49 @@ header h1 {
     text-transform: uppercase;
     font-weight: 700;
     color: var(--darkGrayishCyan);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     letter-spacing: 1rem;
 }
 
-#night {
-    background-image: url(images/moon.svg);
+.toggle-theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    display: none;
+}
+.checkbox:checked + .label .ball {
+    transform: translateX(2.4rem);
+}
+
+.label {
+    background-color: #111;
+    width: 5rem;
+    height: 2.6rem;
+    border-radius: 5rem;
+    align-items: center;
+    padding: .4rem;
+    position: relative;
+
+}
+
+.fa-moon, .fa-sun{
+    width: .8rem;
+    height: .8rem;
+    color: #f1c40f;
+}
+.ball {
+    width: 2.85rem;
+    height: 2.85rem;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+    transition: transform .3s linear;
 }
 
 main {
@@ -173,7 +210,7 @@ input::placeholder{
     font-family: monospace;
     font-size: 2rem;
     letter-spacing: .4rem;
-    color: tomato;
+    color: darkcyan;
     align-self: center;
     margin: 1rem;
     padding: 2rem;
@@ -184,5 +221,5 @@ input::placeholder{
 }
 
 .attribution a:visited {
-    color:darkcyan;
+    color:tomato;
 }

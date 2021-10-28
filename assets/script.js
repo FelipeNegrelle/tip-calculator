@@ -15,19 +15,16 @@ const totalPerPerson = document.getElementsByClassName("totalPerson");
 const reset = document.getElementsByClassName("reset");
 //select percentage for calculate the bill
 const selected = document.querySelector("button.selected");
-// class with the parseinted values of the bill, tip and people
-let values = {
-    billV: parseInt(bill.value),
-    percentage: parseInt(selected.value),
-    peopleN: parseInt(people.value)
-}
+
+let billV = parseInt(bill.value);
+let peopleN = parseInt(people.value);
+let percentage = parseInt(selected.value);
 
 tips.forEach(btn => {
     btn.addEventListener("click", () => {
         if (btn.classList.contains("selected")) {
             btn.classList.remove("selected");
             btn.classList.add("tips-itens");
-            btn.classList.values();
             console.log(tips);
             console.log(selected);
         } else {
@@ -43,14 +40,11 @@ tips.forEach(btn => {
 });
 
 function calculateBill() {
-    values.billV = parseInt(bill.value);
-    values.percentage = parseInt(selected.value);
-    values.peopleN = parseInt(people.value);
-    console.log(values.billV, values.percentage, values.peopleN);
-
-    tipFinal.value = ((values.billV * values.percentage) / 100) / values.peopleN;
+    console.log(billV, percentage, peopleN);
+    tipFinal.value = (billV * percentage) / 100 / peopleN;
+    console.log(tipFinal.value)
 }
 
-if (values.billV > 0 && values.peopleN > 0) {
+if (billV > 0 && peopleN > 0) {
     calculateBill();
 }
