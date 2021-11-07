@@ -1,4 +1,5 @@
 "use strict";
+
 //input for the bill value 
 const bill = document.querySelector("#bill");
 //button for the percentage of tip
@@ -23,11 +24,7 @@ const cardAnswer = document.querySelector(".cardAnswer");
 const main = document.querySelector("main");
 //texts for toggle
 const text = document.querySelectorAll(".text");
-
-// let billV = parseInt(bill.value);
-// let peopleN = parseInt(people.value);
-// let percentage = parseInt(selected.value);
-
+// selected toggle
 tips.forEach(btn => {
     btn.addEventListener("click", () => {
         if (btn.classList.contains("selected")) {
@@ -44,22 +41,9 @@ tips.forEach(btn => {
             console.log(tips);
         }
     })
-});
-
-    // function calculateBill() {
-    //     console.log(billV, percentage, peopleN);
-    //     tipFinal.value = (billV * percentage) / 100 / peopleN;
-    //     console.log(tipFinal.value)
-    // }
-
-    // if (billV > 0 && peopleN > 0) {
-    //     calculateBill();
-    // }
-
+})
 
 // dark toggle implementation
-
-
 checkbox.addEventListener("change", () => {
     document.body.classList.toggle("dark");
     bill.classList.toggle("dark");
@@ -68,31 +52,11 @@ checkbox.addEventListener("change", () => {
     main.classList.toggle("dark");
     console.log("sus");
 
-
-    tips.forEach(lal => {
-        lal.addEventListener("click", () => {
-            if (lal.classList.contains("selected")) {
-                lal.classList.remove("selected");
-                lal.classList.add("tips-itens");
-                console.log(tips);
-                console.log(selected);
-            } else {
-                tips.forEach(e => {
-                    e.classList.remove("selected");
-                })
-                lal.classList.remove("dark");
-                lal.classList.add("selected");
-                lal.classList.add("dark");
-                console.log(tips);
-            }
-        })
-    });
-    
-
-    tips.forEach(btn => {
-        btn.classList.toggle("dark");
-    })
     text.forEach(dark=> {
         dark.classList.toggle("dark");
     })
+})
+
+bill.addEventListener("input", () => {
+    return;
 })

@@ -20,8 +20,12 @@ main.dark {
     color: var(--white);
 }
 
-.tips-itens.dark,
-.custom.dark {
+.tips-itens.dark{
+    background-color: var(--darkGrayishCyan);
+    color: var(--white);
+}
+
+.custom.dark{
     background-color: var(--darkGrayishCyan);
     color: var(--white);
 }

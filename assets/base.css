@@ -13,4 +13,5 @@ html {
     font-family: 'Space Mono', monospace;
     background-color: var(--lightGrayishCyan);
     box-sizing: border-box;
+    transition: ease 100ms;
 }

@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    transition: ease 200ms;
 }
 
 header {
@@ -62,7 +63,7 @@ header h1 {
     position: absolute;
     top: .2rem;
     left: .2rem;
-    transition: transform .3s linear;
+    transition: .3s linear;
 }
 
 main {
@@ -73,6 +74,7 @@ main {
     height: 27rem;
     padding: 3.5rem;
     border-radius: 2rem;
+    transition: ease 200ms;
 }
 
 .cardInput {
@@ -89,6 +91,7 @@ main {
     margin-top: 1rem;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
+    transition: ease 200ms;
 }
 
 input::placeholder{
@@ -96,6 +99,7 @@ input::placeholder{
     color: var(--darkGrayishCyan);
     margin-top: 1rem;
     font-family: 'Space Mono', monospace;
+    transition: ease 200ms;
 }
 
 #bill {
@@ -107,6 +111,7 @@ input::placeholder{
     border: none;
     border-radius: .5rem;
     padding: .6rem;
+    transition: ease 200ms;
 }
 
 .tips {
@@ -130,6 +135,7 @@ input::placeholder{
     font-family: 'Space Mono', monospace;
     text-align: center;
     cursor: pointer;
+    transition: ease 200ms;
 }
 
 .selected {
@@ -159,6 +165,7 @@ input::placeholder{
     font-weight: 600;
     font-family: 'Space Mono', monospace;
     text-align: center;
+    transition: ease 200ms;
 }
 
 #people {
@@ -170,6 +177,7 @@ input::placeholder{
     border: none;
     border-radius: .5rem;
     padding: .8rem;
+    transition: ease 200ms;
 }
 
 .cardAnswer {
@@ -182,6 +190,7 @@ input::placeholder{
     padding: 3rem;
     border-radius: .9rem;
     margin-left: 6rem;
+    transition: ease 200ms;
 }
 
 
