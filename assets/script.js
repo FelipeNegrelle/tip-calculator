@@ -25,6 +25,9 @@ const main = document.querySelector("main");
 //texts for toggle
 const text = document.querySelectorAll(".text");
 // selected toggle
+
+let billV, peopleV, customV;
+
 tips.forEach(btn => {
     btn.addEventListener("click", () => {
         if (btn.classList.contains("selected")) {
@@ -56,7 +59,7 @@ checkbox.addEventListener("change", () => {
         dark.classList.toggle("dark");
     })
 })
-
 bill.addEventListener("input", () => {
-    return;
+    billV = parseInt(bill.value);
+
 })
