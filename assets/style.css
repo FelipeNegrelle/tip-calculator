@@ -56,13 +56,13 @@ header h1 {
     color: #f1c40f;
 }
 .ball {
-    width: 2.85rem;
-    height: 2.85rem;
+    width: 2.8rem;
+    height: 2.8rem;
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    top: .2rem;
-    left: .2rem;
+    top: .35rem;
+    left: .35rem;
     transition: .3s linear;
 }
 
@@ -94,12 +94,31 @@ main {
     transition: ease 200ms;
 }
 
+.text2 {
+    color: white;
+    margin: .5rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.text3 {
+    color: var(--darkGrayishCyan);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: .5rem 0;
+    transition: ease 200ms;
+}
+
 input::placeholder{
     font-size: 1.5rem;
     color: var(--darkGrayishCyan);
     margin-top: 1rem;
     font-family: 'Space Mono', monospace;
     transition: ease 200ms;
+}
+
+.warn {
+    border: 1px solid tomato;
 }
 
 #bill {
@@ -194,15 +213,17 @@ input::placeholder{
 }
 
 
-/* .tipAmount {
+.tipAmount {
     margin-bottom: 2rem;
+    color: white;
+    transition: ease 200ms;
 }
 
 .cardAnswer input {
     background-color: var(--veryDarkCyan);
     border: none;
     color: var(--strongCyan);
-} */
+}
 
 .reset {
     background-color: var(--strongCyan);
@@ -214,6 +235,15 @@ input::placeholder{
     padding: 1rem 9rem;
     text-align: center;
     opacity: 30%;
+    transition: ease 200ms;
+}
+
+.reset:hover {
+    opacity: 100%;
+}
+
+.reset:active {
+    transform: scale(0.9);
 }
 
 .attribution {

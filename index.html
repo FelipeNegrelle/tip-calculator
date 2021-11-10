@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
+
 <body>
   <header>
     <h1>splitter</h1>
@@ -30,7 +31,7 @@
   <main class="">
     <section class="cardInput">
       <p class="text ">Bill</p>
-      <input type="text" id="bill" placeholder="0"/>
+      <input type="text" id="bill" placeholder="0" />
       <p class="text ">Select Tip %</p>
       <div class="tips">
         <button type="number" class="tips-itens " id="btn" value="5">5%</button>
@@ -46,13 +47,21 @@
         <input type="number" class="custom " placeholder="Custom">
       </div>
       <p class="text ">Number of People</p>
-        <input type="text" id="people" placeholder="0"/>
+      <input type="text" id="people" placeholder="0" />
     </section>
     <section class="cardAnswer ">
-      <div class="tipAmount">
-        <input type="number" class="tipAmount" disabled />
-        <input type="number" class="totalPerson" disabled />
-      </div>
+      <section class="tipAmount">
+        <div>
+          <p class="text2">Tip Amount</p>
+          <p class="text3">/ person</p>
+          <input type="number" class="tipAmount" disabled />
+        </div>
+        <div>
+          <p class="text2">Total</p>
+          <p class="text3">/ person</p>
+          <input type="number" class="totalPerson" disabled />
+        </div>
+      </section>
       <button class="reset">reset</button>
     </section>
   </main>
@@ -62,4 +71,5 @@
   </div>
   <script src="assets/script.js"></script>
 </body>
+
 </html>

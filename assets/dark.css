@@ -13,6 +13,9 @@ main.dark {
 .text.dark {
     color: var(--white);
 }
+.text3.dark {
+    color: var(--lightGrayishCyan);
+}
 
 #bill.dark,
 #people.dark {
@@ -31,6 +34,10 @@ main.dark {
 }
 
 .cardAnswer.dark {
+    background-color: var(--darkGrayishCyan);
+}
+
+.tipAmount.dark {
     background-color: var(--darkGrayishCyan);
 }
 
