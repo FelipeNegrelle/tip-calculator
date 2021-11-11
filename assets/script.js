@@ -13,7 +13,7 @@ const tipFinal = document.querySelector(".tipAmount");
 //place to show the tip per person
 const totalPerPerson = document.querySelector(".totalPerson");
 //button that reset the values
-const reset = document.getElementsByClassName("reset");
+const reset = document.querySelector(".reset");
 // checkbox for toggle darkmode
 const checkbox = document.getElementById("checkbox");
 //card answer for the dark toggle 
@@ -26,7 +26,7 @@ const text3 = document.querySelectorAll(".text3");
 
 // selected toggle
 
-let billV, peopleV, customV, tipV;
+let billV, peopleV, customV, tipV, percentage, total;
 
 tips.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -52,7 +52,7 @@ checkbox.addEventListener("change", () => {
     people.classList.toggle("dark");
     cardAnswer.classList.toggle("dark");
     main.classList.toggle("dark");
-    text.forEach(dark=> {
+    text.forEach(dark => {
         dark.classList.toggle("dark");
     })
     text3.forEach(dark => {
@@ -81,16 +81,40 @@ people.addEventListener("blur", () => {
 tipCustom.addEventListener("blur", () => {
     customV = parseFloat(tipCustom.value);
     console.log(customV);
-     })
+})
 
 function calc() {
+    percentage = (billV * tipV) / 100;
+    total = (billV + percentage) / peopleV;
     if (customV > 0) {
-        total = (customV * tipV) / peopleV;
+        total = (customV + tipV) / peopleV;
         console.log(customV);
     }
 
-    percentage = (billV * tipV) / 100;
-    total = (billV * tipV) / peopleV;
-    tipFinal.value = `$${10+2}`;
-    totalPerPerson.value = `$${10+2}`;
+    tipFinal.innerHTML = `$${(percentage).toFixed(2)}`;
+    totalPerPerson.innerHTML = `$${(total).toFixed(2)}`;
 }
+
+reset.addEventListener("click", () => {
+    bill.value = "";
+    people.value = "";
+    tipFinal.innerHTML = "$0.00";
+    totalPerPerson.innerHTML = "$0.00";
+    tipCustom.value = "";
+
+    tips.forEach(btn => {
+        btn.classList.remove("selected");
+    })
+})
+
+/*
+
+lógica do calculo;
+porcentagem(da conta a pagar) = (valor da conta * valor da gorjeta) / 100 (para se descobrir quanto vai se pagar de gorjeta)
+total(conta + gorjeta) = porcentagem + valor da conta em si
+
+caso haja valor custom, se ele for maior que zero o utilizar como valor da porcentagem
+
+*/
+
+//bug pra corrigir: quando se coloca valor customizado a conta retorna NaN (arruma essa gronha de bug pls)
