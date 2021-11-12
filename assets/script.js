@@ -23,6 +23,7 @@ const main = document.querySelector("main");
 //texts for toggle
 const text = document.querySelectorAll(".text");
 const text3 = document.querySelectorAll(".text3");
+const html = document.querySelector("html");
 
 // selected toggle
 
@@ -42,6 +43,7 @@ tips.forEach(btn => {
             btn.classList.add("selected");
             btn.classList.add("tips-itens");
         }
+        calc();
     })
 })
 
@@ -52,6 +54,7 @@ checkbox.addEventListener("change", () => {
     people.classList.toggle("dark");
     cardAnswer.classList.toggle("dark");
     main.classList.toggle("dark");
+    html.classList.toggle("dark");
     text.forEach(dark => {
         dark.classList.toggle("dark");
     })
@@ -64,6 +67,7 @@ checkbox.addEventListener("change", () => {
 bill.addEventListener("blur", () => {
     billV = parseFloat(bill.value);
     console.log(billV);
+    calc();
 });
 
 people.addEventListener("blur", () => {
@@ -76,11 +80,13 @@ people.addEventListener("blur", () => {
     } else {
         people.classList.add("warn");
     }
+    calc();
 })
 
 tipCustom.addEventListener("blur", () => {
     customV = parseFloat(tipCustom.value);
     console.log(customV);
+    calc();
 })
 
 function calc() {
@@ -90,9 +96,14 @@ function calc() {
         total = (customV + tipV) / peopleV;
         console.log(customV);
     }
+    if (percentage > 0 && total > 0) {
+        tipFinal.innerHTML = `$${(percentage).toFixed(2)}`;
+        totalPerPerson.innerHTML = `$${(total).toFixed(2)}`;
+    } else {
+        tipFinal.innerHTML = `$0.00`;
+        totalPerPerson.innerHTML = `$0.00`;
+    }
 
-    tipFinal.innerHTML = `$${(percentage).toFixed(2)}`;
-    totalPerPerson.innerHTML = `$${(total).toFixed(2)}`;
 }
 
 reset.addEventListener("click", () => {
@@ -106,15 +117,3 @@ reset.addEventListener("click", () => {
         btn.classList.remove("selected");
     })
 })
-
-/*
-
-lógica do calculo;
-porcentagem(da conta a pagar) = (valor da conta * valor da gorjeta) / 100 (para se descobrir quanto vai se pagar de gorjeta)
-total(conta + gorjeta) = porcentagem + valor da conta em si
-
-caso haja valor custom, se ele for maior que zero o utilizar como valor da porcentagem
-
-*/
-
-//bug pra corrigir: quando se coloca valor customizado a conta retorna NaN (arruma essa gronha de bug pls)
